@@ -6,6 +6,7 @@ require('nightfox').setup({options = {transparent = true, styles = {comments = "
 vim.cmd("colorscheme nightfox")
 
 require('telescope').setup{defaults = { file_ignore_patterns = { "node_modules", "acf-json" }}}
+require('treesitter-context').setup()
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
