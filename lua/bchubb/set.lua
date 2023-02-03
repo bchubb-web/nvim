@@ -1,6 +1,4 @@
 require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
-require('telescope').setup{defaults = { file_ignore_patterns = { "node_modules", "acf-json" }}}
-require('treesitter-context').setup()
 
 
 -- colorscheme
@@ -27,6 +25,7 @@ vim.opt.signcolumn = "no"
 -- other functional
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.updatetime = 50
 
 
 
