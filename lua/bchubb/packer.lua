@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
     }
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use ('nvim-treesitter/playground')
+    use ('nvim-treesitter/nvim-treesitter-context')
     use {
   'VonHeikemen/lsp-zero.nvim',
   branch = 'v1.x',
@@ -33,6 +34,17 @@ return require('packer').startup(function(use)
     -- Snippets
     {'L3MON4D3/LuaSnip'},             -- Required
     {'rafamadriz/friendly-snippets'}, -- Optional
-  }
+}
+}
+use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+        require("trouble").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    end
 }
 end)
