@@ -3,48 +3,67 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use "EdenEast/nightfox.nvim" 
-    use "nvim-lua/plenary.nvim"
-    use 'nvim-tree/nvim-web-devicons'
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
 
+    -- my colourtheme
+    use "EdenEast/nightfox.nvim"
+
+    -- cant rember but it is needed by other plugins
+    use "nvim-lua/plenary.nvim"
+
+    -- allows for icons - requires hackfont and other things
+    use 'nvim-tree/nvim-web-devicons'
+
+    -- telescope - fuzzy finder for local files
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
+    -- allows for syntax highlighting 
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+    -- dont need it tbh and could probaly get rid of it
     use ('nvim-treesitter/playground')
+
+    -- shows the current parent function at the top of the screen when deep into it
     use ('nvim-treesitter/nvim-treesitter-context')
-    use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v1.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},         -- Required
-    {'hrsh7th/cmp-nvim-lsp'},     -- Required
-    {'hrsh7th/cmp-buffer'},       -- Optional
-    {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    {'hrsh7th/cmp-nvim-lua'},     -- Optional
+    -- lsp, Autocompletion, functions etc
+    use {'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+        -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},             -- Required
-    {'rafamadriz/friendly-snippets'}, -- Optional
-}
-}
-use {
-    "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
-    config = function()
-        require("trouble").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
+        -- Autocompletion
+            {'hrsh7th/nvim-cmp'},         -- Required
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
+            {'hrsh7th/cmp-buffer'},       -- Optional
+            {'hrsh7th/cmp-path'},         -- Optional
+            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+        -- Snippets
+            {'L3MON4D3/LuaSnip'},             -- Required
+            {'rafamadriz/friendly-snippets'}, -- Optional
         }
-    end
-}
+    }
+
+    -- shows errors in togglable menu
+    use {"folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+        require("trouble").setup {}
+        end}
+
+
+    --sidebar file tree
+    use { 'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons',
+        }
+    }
+
+
+
 end)

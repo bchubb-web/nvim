@@ -19,6 +19,7 @@ lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
 
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -34,4 +35,30 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+
+lsp.configure('emmet-ls', {
+    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'php', },
+})
+
+
+lsp.configure('sumneko_lua', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
+
+
+
+
+
 lsp.setup()
+
+-- diagnostic config
+vim.diagnostic.config({
+    virtual_text = true,
+    underline = false,
+})
