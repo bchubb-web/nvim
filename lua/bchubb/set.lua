@@ -21,6 +21,7 @@ vim.opt.scrolloff = 8
 vim.g.netrw_banner = 0
 
 vim.opt.signcolumn = "no"
+vim.opt.cursorline = true
 
 -- other functional
 vim.opt.swapfile = false
