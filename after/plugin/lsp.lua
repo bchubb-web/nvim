@@ -35,24 +35,14 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
---local files_associations = {}
---files_associations["*.install"] = "php"
---files_associations["*.theme"] = "php"
---files_associations["*.module"] = "php"
---files_associations["*.inc"] = "php"
 
 lsp.configure('intelephense', {
-    filetypes = {'php', "*.php"},
+    filetypes = {'php'},
     settings = {intelephense = { files = { associations = {"*.php"}}}},
     root_dir = function(fname)
         return vim.fn.getcwd()
     end
 })
-
---lsp.configure('emmet-ls', {
-    --filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'php', },
---    settings = {emmetls = { files = { associations = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'php', }}}}
---})
 
 
 lsp.configure('sumneko_lua', {
@@ -64,9 +54,6 @@ lsp.configure('sumneko_lua', {
         }
     }
 })
-
-
-
 
 
 lsp.setup()
