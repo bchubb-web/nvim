@@ -22,7 +22,7 @@ vim.keymap.set("n", "-", "<C-x>")
 vim.keymap.set('n', '<Leader>re', vim.cmd.TroubleToggle )
 
 -- toggle side tree
-vim.keymap.set("n", "<Leader>pp", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<Leader>pp", ":NvimTreeFocus<CR>")
 
 --select all
 -- vim.keymap.set("n", "<C-a>", "gg<S-v>G")

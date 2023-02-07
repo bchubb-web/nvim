@@ -17,7 +17,7 @@ vim.opt.expandtab = true
 -- formatting
 vim.opt.smartindent = true
 vim.opt.wrap = false
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 6
 vim.g.netrw_banner = 0
 
 vim.opt.signcolumn = "no"
