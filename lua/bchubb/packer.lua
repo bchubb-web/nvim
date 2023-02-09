@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
 
     -- my colourtheme
     use "EdenEast/nightfox.nvim"
+    use "catppuccin/vim"
 
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
@@ -62,8 +63,9 @@ return require('packer').startup(function(use)
     }
 
     -- auto complete [ { ' ":q
-    --
     use "windwp/nvim-autopairs"
 
+    --colours css shit
+    use "rrethy/vim-hexokinase"
 
 end)
