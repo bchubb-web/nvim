@@ -1,4 +1,4 @@
-require('telescope').setup{defaults = { file_ignore_patterns = { "node_modules", "acf-json" }}}
+require('telescope').setup{defaults = { file_ignore_patterns = { "node_modules", "acf-json", "dist" }}}
 
 
 local builtin = require('telescope.builtin')

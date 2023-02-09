@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
 
     -- my colourtheme
     use "EdenEast/nightfox.nvim"
+    use "catppuccin/vim"
 
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
@@ -65,5 +66,6 @@ return require('packer').startup(function(use)
     --
     use "windwp/nvim-autopairs"
 
+    use "rrethy/vim-hexokinase"
 
 end)

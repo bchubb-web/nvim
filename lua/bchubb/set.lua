@@ -1,8 +1,12 @@
 require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
+--require('catppuccin').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
 
 
 -- colorscheme
 vim.cmd("colorscheme nightfox")
+--vim.cmd("colorscheme catppuccin_mocha")
+-- colour css colours
+vim.g.Hexokinase_highlighters = 'backgroundfull'
 
 -- line numbers
 vim.opt.number = true
