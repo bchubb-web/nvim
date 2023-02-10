@@ -6,7 +6,7 @@ require('nightfox').setup({options = {transparent = true, styles = {comments = "
 vim.cmd("colorscheme nightfox")
 --vim.cmd("colorscheme catppuccin_mocha")
 -- colour css colours
-vim.g.Hexokinase_highlighters = 'backgroundfull'
+--vim.g.Hexokinase_highlighters = 'backgroundfull'
 
 -- line numbers
 vim.opt.number = true

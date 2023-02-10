@@ -66,6 +66,6 @@ return require('packer').startup(function(use)
     use "windwp/nvim-autopairs"
 
     --colours css shit
-    use "rrethy/vim-hexokinase"
+    --use {"rrethy/vim-hexokinase", run = "make hexokinase",}
 
 end)
