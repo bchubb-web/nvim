@@ -32,7 +32,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.updatetime = 50
 
-
+vim.api.nvim_command("filetype plugin on")
 
 
 

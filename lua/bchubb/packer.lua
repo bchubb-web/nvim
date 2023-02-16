@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+  -- 
     use 'wbthomason/packer.nvim'
 
     -- my colourtheme
@@ -63,7 +64,10 @@ return require('packer').startup(function(use)
     -- auto complete [ { ' ":q
     use "windwp/nvim-autopairs"
 
+    -- funky comments ;)
+    use 'preservim/nerdcommenter'
     --colours css shit
     --use {"rrethy/vim-hexokinase", run = "make hexokinase",}
 
+    use "lukas-reineke/indent-blankline.nvim"
 end)

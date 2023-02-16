@@ -45,7 +45,7 @@ lsp.configure('intelephense', {
 })
 
 
-lsp.configure('sumneko_lua', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
