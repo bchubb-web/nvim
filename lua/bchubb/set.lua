@@ -1,10 +1,21 @@
 require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
---require('catppuccin').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
+
+require("catppuccin").setup({
+    transparent_background = true,
+    show_end_of_buffer = true,
+    styles = {
+        keywords = { "bold" },
+        properties = { "italic" },
+    }
+})
+
 
 
 -- colorscheme
+--vim.cmd.colorscheme = "catppuccin"
 vim.cmd("colorscheme nightfox")
---vim.cmd("colorscheme catppuccin_mocha")
+vim.cmd("colorscheme catppuccin")
+
 -- colour css colours
 --vim.g.Hexokinase_highlighters = 'backgroundfull'
 
@@ -24,7 +35,7 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 6
 vim.g.netrw_banner = 0
 
-vim.opt.signcolumn = "no"
+--vim.opt.signcolumn = "no"
 vim.opt.cursorline = true
 
 -- statusline config (lualine)

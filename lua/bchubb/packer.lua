@@ -7,7 +7,8 @@ return require('packer').startup(function(use)
 
     -- my colourtheme
     use "EdenEast/nightfox.nvim"
-    use "catppuccin/vim"
+
+    use { "catppuccin/nvim", as = "catppuccin"}
 
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
