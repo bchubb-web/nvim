@@ -27,17 +27,13 @@ vim.g.netrw_banner = 0
 vim.opt.signcolumn = "no"
 vim.opt.cursorline = true
 
+-- statusline config (lualine)
+vim.opt.laststatus = 3
+vim.cmd [[highlight WinSeparator guibg=None]]
+
 -- other functional
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.updatetime = 50
 
 vim.api.nvim_command("filetype plugin on")
-
-
-
-
-
-
-
-
