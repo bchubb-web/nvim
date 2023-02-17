@@ -70,4 +70,10 @@ return require('packer').startup(function(use)
     --use {"rrethy/vim-hexokinase", run = "make hexokinase",}
 
     use "lukas-reineke/indent-blankline.nvim"
+
+    -- line at bottom looking nice
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
