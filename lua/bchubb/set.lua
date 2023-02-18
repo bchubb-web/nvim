@@ -1,7 +1,7 @@
-require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
+--require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
 
 require("catppuccin").setup({
-    transparent_background = true,
+    transparent_background = false,
     show_end_of_buffer = true,
     styles = {
         keywords = { "bold" },
@@ -13,7 +13,7 @@ require("catppuccin").setup({
 
 -- colorscheme
 --vim.cmd.colorscheme = "catppuccin"
-vim.cmd("colorscheme nightfox")
+--vim.cmd("colorscheme nightfox")
 vim.cmd("colorscheme catppuccin")
 
 -- colour css colours

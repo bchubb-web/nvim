@@ -12,8 +12,6 @@ return require('packer').startup(function(use)
 
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
-
-    -- allows for icons - requires hackfont and other things
     use 'nvim-tree/nvim-web-devicons'
 
     -- telescope - fuzzy finder for local files
