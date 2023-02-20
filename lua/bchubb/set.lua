@@ -1,7 +1,7 @@
 --require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
 
 require("catppuccin").setup({
-    transparent_background = false,
+    transparent_background = true,
     show_end_of_buffer = true,
     styles = {
         keywords = { "bold" },
@@ -15,7 +15,7 @@ require("catppuccin").setup({
 --vim.cmd.colorscheme = "catppuccin"
 --vim.cmd("colorscheme nightfox")
 vim.cmd("colorscheme catppuccin")
-
+vim.opt.termguicolors = true
 -- colour css colours
 --vim.g.Hexokinase_highlighters = 'backgroundfull'
 
