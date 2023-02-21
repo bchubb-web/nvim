@@ -1,27 +1,32 @@
 --require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
 
 require("catppuccin").setup({
+    highlight_overrides = {
+        all = function(colors)
+            return {
+                LineNr = { fg = "#ded7c3" },
+            }
+        end,
+    },
     transparent_background = true,
     show_end_of_buffer = true,
     styles = {
         keywords = { "bold" },
         properties = { "italic" },
-    }
+    },
 })
 
 
 
 -- colorscheme
---vim.cmd.colorscheme = "catppuccin"
 --vim.cmd("colorscheme nightfox")
 vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
--- colour css colours
---vim.g.Hexokinase_highlighters = 'backgroundfull'
 
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.cmd [[highlight LineNr ctermfg=white]]
 
 -- make tabs normal
 vim.opt.tabstop = 4
