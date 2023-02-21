@@ -27,8 +27,11 @@ vim.keymap.set("n", "<leader>q", vim.cmd.NvimTreeToggle)
 
 -- focus of side tree
 vim.keymap.set("n", "<Leader>pp", ":NvimTreeFocus<CR>")
+vim.keymap.set("n", "<Leader>P", "<c-w>l")
 
 -- add semicolon to end of line
 vim.keymap.set("n", "<leader>;", "A;<Esc>")
 
-
+vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
+vim.keymap.set("n", "!", "<cmd>FloatermToggle<CR>")
+vim.keymap.set("t", "!", "<cmd>FloatermToggle<CR>")
