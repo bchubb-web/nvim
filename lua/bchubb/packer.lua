@@ -88,4 +88,6 @@ return require('packer').startup(function(use)
 
     use 'voldikss/vim-floaterm'
 
+    use 'mattn/emmet-vim'
+
 end)

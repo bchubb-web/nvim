@@ -33,5 +33,6 @@ vim.keymap.set("n", "<Leader>P", "<c-w>l")
 vim.keymap.set("n", "<leader>;", "A;<Esc>")
 
 vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
+
 vim.keymap.set("n", "!", "<cmd>FloatermToggle<CR>")
---vim.keymap.set("t", "<Esc><Esc>", "<cmd>FloatermToggle<CR>")
+vim.keymap.set("t", "!", "<cmd>FloatermToggle<CR>")
