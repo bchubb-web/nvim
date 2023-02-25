@@ -1,2 +1,3 @@
-require('colorizer').setup{
-}
+require('colorizer').setup()
+
+vim.cmd [[ColorizerAttachToBuffer]]
