@@ -38,3 +38,8 @@ vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
 
 vim.keymap.set("n", "!", "<cmd>FloatermToggle<CR>")
 vim.keymap.set("t", "!", "<cmd>FloatermToggle<CR>")
+
+
+
+
+vim.keymap.set("n", "<Leader>fr", ":%s//<Left>")
