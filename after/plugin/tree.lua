@@ -1,12 +1,2 @@
-require('nvim-tree').setup({
-    view = {
-        mappings = {
-            list = {
-
-            }
-        }
-
-    }
-})
-
-vim.cmd('NvimTreeOpen')
+require('nvim-tree').setup({})
+--vim.cmd('NvimTreeOpen')

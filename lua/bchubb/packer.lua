@@ -1,33 +1,32 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  -- 
+    
+    --packer itself??? meta AF
     use 'wbthomason/packer.nvim'
 
-    -- my colourtheme
+    -- my colourthemes
     use "EdenEast/nightfox.nvim"
-
-    use { "catppuccin/nvim", as = "catppuccin"}
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
+
+    -- adds icons for other plugons
     use 'nvim-tree/nvim-web-devicons'
 
     -- telescope - fuzzy finder for local files
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { {'nvim-lua/plenary.nvim'} } }
 
     -- allows for syntax highlighting 
-    use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-
-    -- dont need it tbh and could probaly get rid of it
-    use ('nvim-treesitter/playground')
+    use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
 
     -- shows the current parent function at the top of the screen when deep into it
     use ('nvim-treesitter/nvim-treesitter-context')
 
     -- lsp, Autocompletion, functions etc
-    use {'VonHeikemen/lsp-zero.nvim',
+    use {
+        'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
         requires = {
         -- LSP Support
@@ -50,14 +49,15 @@ return require('packer').startup(function(use)
     }
 
     -- shows errors in togglable menu
-    use {"folke/trouble.nvim",
+    use {
+        "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
     }
 
     --sidebar file tree
-    use { 'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons',
-        }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons'}
     }
 
     -- auto complete [ { ' ":q
@@ -65,9 +65,8 @@ return require('packer').startup(function(use)
 
     -- funky comments ;)
     use 'preservim/nerdcommenter'
-    --colours css shit
-    --use {"rrethy/vim-hexokinase", run = "make hexokinase",}
 
+    -- adds lines for indents
     use "lukas-reineke/indent-blankline.nvim"
 
     -- line at bottom looking nice
@@ -76,8 +75,10 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- colours hex codes stc in css
     use 'norcalli/nvim-colorizer.lua'
 
+    -- floating command line 
     use {
         'VonHeikemen/fine-cmdline.nvim',
         requires = {
@@ -85,9 +86,10 @@ return require('packer').startup(function(use)
         }
     }
 
-
+    -- a floaty terminal
     use 'voldikss/vim-floaterm'
 
+    -- emmet keybindingd
     use 'mattn/emmet-vim'
 
 end)

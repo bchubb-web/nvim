@@ -19,7 +19,6 @@ require("catppuccin").setup({
 
 
 -- colorscheme
---vim.cmd("colorscheme nightfox")
 vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
 

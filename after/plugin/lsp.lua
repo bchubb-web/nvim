@@ -12,7 +12,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 lsp.set_preferences({
-    sign_icons = { }
+    sign_icons = {}
 })
 
 lsp.setup_nvim_cmp({
@@ -35,9 +35,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.configure('eslint', {
-
-})
+lsp.configure('eslint', {})
 
 lsp.configure('intelephense', {
     filetypes = {'php'},
