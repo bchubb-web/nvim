@@ -39,7 +39,33 @@ lsp.configure('eslint', {})
 
 lsp.configure('intelephense', {
     filetypes = {'php'},
-    settings = {intelephense = { files = { associations = {"*.php"}}}},
+    settings = {
+        intelephense = {
+            files = {
+                associations = {"*.php"},
+                maxSize = 5000000
+            },
+            stubs = {
+                "bcmath",
+                "bz2",
+                "calendar",
+                "Core",
+                "curl",
+                "zip",
+                "zlib",
+                "wordpress",
+                "woocommerce",
+                "acf-pro",
+                "wordpress-globals",
+                "wp-cli",
+                "genesis",
+                "polylang"
+            },
+            environment = {
+                includePaths = '/Users/billychubb/.composer/vendor/php-stubs/'
+            }
+        }
+    },
     root_dir = function(fname)
         return vim.fn.getcwd()
     end

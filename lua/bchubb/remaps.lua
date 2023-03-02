@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+-- new command line
+vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
 
 -- moving selected lines in V mode
 vim.keymap.set("v","J", ":m '>+1<CR>gv=gv")
@@ -17,7 +19,7 @@ vim.keymap.set("n", "<Leader>a", "0f>a")
 vim.keymap.set("n", "<Leader>I", "F>lvt<di")
 vim.keymap.set("n", "<Leader>A", "0f>lv$F<hdi")
 
--- number namipulation
+-- integer namipulation
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
 
@@ -34,13 +36,15 @@ vim.keymap.set("n", "<Leader>P", "<c-w>l")
 -- add semicolon to end of line
 vim.keymap.set("n", "<leader>;", "A;<Esc>")
 
-vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
-
+-- floating terminal commands
 vim.keymap.set("n", "!", "<cmd>FloatermToggle<CR>")
 vim.keymap.set("t", "!", "<cmd>FloatermToggle<CR>")
 vim.keymap.set("t", "<Leader>!", "<cmd>FloatermKill<CR>")
 
-
-
+-- find and replace
 vim.keymap.set("n", "<Leader>fr", ":%s//<Left>")
+-- find
 vim.keymap.set("n", "<Leader>fd", "/")
+
+-- empty all buffers except this one
+vim.keymap.set("n", "<Leader>bd", "<cmd>w|%bd|e#|bd#<CR>")
