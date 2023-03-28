@@ -1,6 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
-    
+
     --packer itself??? meta AF
     use 'wbthomason/packer.nvim'
 
@@ -47,12 +47,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- shows errors in togglable menu
-    use {
-        "folke/trouble.nvim",
-        requires = "nvim-tree/nvim-web-devicons",
-    }
-
     --sidebar file tree
     use {
         'nvim-tree/nvim-tree.lua',
@@ -61,9 +55,6 @@ return require('packer').startup(function(use)
 
     -- auto complete [ { ' ":q
     use "windwp/nvim-autopairs"
-
-    -- funky comments ;)
-    use 'preservim/nerdcommenter'
 
     -- adds lines for indents
     use "lukas-reineke/indent-blankline.nvim"
@@ -76,14 +67,6 @@ return require('packer').startup(function(use)
 
     -- colours hex codes stc in css
     use 'norcalli/nvim-colorizer.lua'
-
-    -- floating command line 
-    use {
-        'VonHeikemen/fine-cmdline.nvim',
-        requires = {
-            {'MunifTanjim/nui.nvim'}
-        }
-    }
 
     -- a floaty terminal
     use 'voldikss/vim-floaterm'

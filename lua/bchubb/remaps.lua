@@ -1,7 +1,5 @@
 vim.g.mapleader = " "
 
--- new command line
-vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
 
 -- moving selected lines in V mode
 vim.keymap.set("v","J", ":m '>+1<CR>gv=gv")
