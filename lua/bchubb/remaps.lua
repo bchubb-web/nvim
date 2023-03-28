@@ -41,6 +41,7 @@ vim.keymap.set("n", "<leader>;", "A;<Esc>")
 
 -- find and replace
 vim.keymap.set("n", "<Leader>fr", ":%s//<Left>")
+
 -- find
 vim.keymap.set("n", "<Leader>fd", "/")
 

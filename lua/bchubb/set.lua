@@ -27,6 +27,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.cmd [[highlight LineNr ctermfg=white]]
 
+vim.wo.cursorline = true
 -- make tabs normal
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
