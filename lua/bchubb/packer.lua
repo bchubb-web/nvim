@@ -54,7 +54,7 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons'}
     }
 
-    -- auto complete [ { ' ":q
+    -- auto complete [ { ( ' ` " 
     use "windwp/nvim-autopairs"
 
     -- adds lines for indents
@@ -68,9 +68,6 @@ return require('packer').startup(function(use)
 
     -- colours hex codes stc in css
     use 'norcalli/nvim-colorizer.lua'
-
-    -- a floaty terminal
-    use 'voldikss/vim-floaterm'
 
     -- emmet keybindingd
     use 'mattn/emmet-vim'
