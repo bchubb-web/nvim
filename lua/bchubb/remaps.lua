@@ -10,8 +10,12 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 --indenting
-vim.keymap.set("v", "<", "<gv=gv")
-vim.keymap.set("v", ">", ">gv=gv")
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
+--formatted indenting
+vim.keymap.set("v", "<Leader><", "<gv=gv")
+vim.keymap.set("v", "<Leader>>", ">gv=gv")
 
 -- entering first tag on line
 vim.keymap.set("n", "<Leader>i", "F>a")
@@ -29,7 +33,7 @@ vim.keymap.set("n", "-", "<C-x>")
 vim.keymap.set("n", "<leader>q", vim.cmd.NvimTreeToggle)
 
 -- focus of side tree
-vim.keymap.set("n", "<Leader>pp", ":NvimTreeFocus<CR>")
+vim.keymap.set("n", "<Leader>pp", vim.cmd.NvimTreeFocus)
 vim.keymap.set("n", "<Leader>P", "<c-w>l")
 
 -- add semicolon to end of line
