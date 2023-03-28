@@ -34,13 +34,9 @@ vim.keymap.set("n", "<Leader>P", "<c-w>l")
 -- add semicolon to end of line
 vim.keymap.set("n", "<leader>;", "A;<Esc>")
 
--- floating terminal commands
-vim.keymap.set("n", "!", "<cmd>FloatermToggle<CR>")
-vim.keymap.set("t", "!", "<cmd>FloatermToggle<CR>")
-vim.keymap.set("t", "<Leader>!", "<cmd>FloatermKill<CR>")
-
 -- find and replace
 vim.keymap.set("n", "<Leader>fr", ":%s//<Left>")
+
 -- find
 vim.keymap.set("n", "<Leader>fd", "/")
 

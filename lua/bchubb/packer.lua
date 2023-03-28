@@ -68,9 +68,6 @@ return require('packer').startup(function(use)
     -- colours hex codes stc in css
     use 'norcalli/nvim-colorizer.lua'
 
-    -- a floaty terminal
-    use 'voldikss/vim-floaterm'
-
     -- emmet keybindingd
     use 'mattn/emmet-vim'
 
