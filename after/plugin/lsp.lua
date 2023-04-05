@@ -45,7 +45,7 @@ lsp.configure('intelephense', {
                 associations = {"*.php"},
                 maxSize = 5000000
             },
-            --stubs = { "bcmath", "bz2", "calendar", "Core", "curl", "zip", "zlib", "wordpress", "woocommerce", "acf-pro", "wordpress-globals", "wp-cli", "genesis", "polylang" },
+            --stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
             --environment = { includePaths = '/Users/billychubb/.composer/vendor/php-stubs/' }
         }
     },

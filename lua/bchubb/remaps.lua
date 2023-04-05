@@ -47,3 +47,9 @@ vim.keymap.set("n", "<Leader>fd", "/")
 
 -- empty all buffers except this one
 vim.keymap.set("n", "<Leader>bd", "<cmd>w|%bd|e#|bd#<CR>")
+
+
+
+-- git commands
+vim.keymap.set("n", "<Leader>ga", "<cmd>Git add .<CR>")
+vim.keymap.set("n", "<Leader>gc", "<cmd>Git commit<CR>")

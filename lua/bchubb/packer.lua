@@ -17,10 +17,13 @@ return require('packer').startup(function(use)
     -- telescope - fuzzy finder for local files
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { {'nvim-lua/plenary.nvim'}, {'BurntSushi/ripgrep'} } }
 
-    -- allows for syntax highlighting 
-    use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
+    -- telescope enhancer
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
-    -- shows the current parent function at the top of the screen when deep into it
+    -- allows for syntax highlighting 
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+    -- shows the current parent function at the top of the screen when it
     use ('nvim-treesitter/nvim-treesitter-context')
 
     -- lsp, Autocompletion, functions etc
@@ -70,5 +73,8 @@ return require('packer').startup(function(use)
 
     -- emmet keybindingd
     use 'mattn/emmet-vim'
+
+    -- git commands
+    use 'tpope/vim-fugitive'
 
 end)
