@@ -35,7 +35,9 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.configure('eslint', {})
+lsp.configure('eslint', {
+    workspaceFolder = {"~/"}
+})
 
 lsp.configure('intelephense', {
     filetypes = {'php'},
@@ -63,6 +65,10 @@ lsp.configure('lua_ls', {
             }
         }
     }
+})
+
+lsp.configure('cssls', {
+  cmd = {"css-languageserver", "--stdio"},
 })
 
 

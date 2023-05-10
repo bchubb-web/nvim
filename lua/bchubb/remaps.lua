@@ -43,12 +43,13 @@ vim.keymap.set("n", "<leader>;", "A;<Esc>")
 vim.keymap.set("n", "<Leader>fr", ":%s//<Left>")
 
 -- find
-vim.keymap.set("n", "<Leader>fd", "/")
+vim.keymap.set("n", "fd", "/")
 
 -- empty all buffers except this one
 vim.keymap.set("n", "<Leader>bd", "<cmd>w|%bd|e#|bd#<CR>")
 
 
+vim.keymap.set("v", "<Leader>y", '"+y')
 
 -- git commands
 vim.keymap.set("n", "<Leader>ga", "<cmd>Git add .<CR>")
