@@ -36,7 +36,10 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.configure('eslint', {
-    workspaceFolder = {"~/"}
+    --workspaceFolder = {"~/"}
+    root_dir = function(fname)
+        return vim.fn.getcwd()
+    end
 })
 
 lsp.configure('intelephense', {
@@ -68,7 +71,7 @@ lsp.configure('lua_ls', {
 })
 
 lsp.configure('cssls', {
-  cmd = {"css-languageserver", "--stdio"},
+  --cmd = {"css-languageserver", "--stdio"},
 })
 
 
