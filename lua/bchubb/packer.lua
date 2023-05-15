@@ -26,6 +26,9 @@ return require('packer').startup(function(use)
     -- shows the current parent function at the top of the screen when it
     use ('nvim-treesitter/nvim-treesitter-context')
 
+    -- harpoon, blazingly fast
+    use ('ThePrimeagen/harpoon')
+
     -- lsp, Autocompletion, functions etc
     use {
         'VonHeikemen/lsp-zero.nvim',
