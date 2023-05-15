@@ -19,8 +19,8 @@ require("catppuccin").setup({
 
 
 -- colorscheme
---vim.cmd("colorscheme catppuccin")
-vim.cmd("colorscheme dracula")
+--vim.cmd("colorscheme dracula")
+vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
 
 -- line numbers
