@@ -35,7 +35,12 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.configure('eslint', {})
+lsp.configure('eslint', {
+    --workspaceFolder = {"~/"}
+    root_dir = function(fname)
+        return vim.fn.getcwd()
+    end
+})
 
 lsp.configure('intelephense', {
     filetypes = {'php'},
@@ -45,7 +50,7 @@ lsp.configure('intelephense', {
                 associations = {"*.php"},
                 maxSize = 5000000
             },
-            --stubs = { "bcmath", "bz2", "calendar", "Core", "curl", "zip", "zlib", "wordpress", "woocommerce", "acf-pro", "wordpress-globals", "wp-cli", "genesis", "polylang" },
+            --stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
             --environment = { includePaths = '/Users/billychubb/.composer/vendor/php-stubs/' }
         }
     },
@@ -63,6 +68,10 @@ lsp.configure('lua_ls', {
             }
         }
     }
+})
+
+lsp.configure('cssls', {
+  --cmd = {"css-languageserver", "--stdio"},
 })
 
 
