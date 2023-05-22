@@ -5,7 +5,8 @@ local ui = require("harpoon.ui")
 local tmux = require("harpoon.tmux")
 
 vim.keymap.set("n", "mf", mark.add_file)
-vim.keymap.set("n", "hp", ui.toggle_quick_menu)
+vim.keymap.set("n", "HP", ui.toggle_quick_menu)
+vim.keymap.set("n", "<C-h>", ui.toggle_quick_menu)
 
 vim.keymap.set("n", "∆", function() ui.nav_file(1) end)
 vim.keymap.set("n", "˚", function() ui.nav_file(2) end)
