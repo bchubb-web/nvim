@@ -25,6 +25,9 @@ vim.keymap.set("n", "<Leader>a", "0f>a")
 vim.keymap.set("n", "<Leader>I", "F>lvt<di")
 vim.keymap.set("n", "<Leader>A", "0f>lv$F<hdi")
 
+-- makes tag with class on default opening tag
+vim.keymap.set("n", "mt", "yypa/<Esc>kea class=''<Esc>i")
+
 -- integer manipulation
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
@@ -48,7 +51,7 @@ vim.keymap.set("n", "fd", "/")
 -- empty all buffers except this one
 vim.keymap.set("n", "<Leader>bd", "<cmd>w|%bd|e#|bd#<CR>")
 
-
+-- copy to system clipboard
 vim.keymap.set("v", "<Leader>y", '"+y')
 
 -- git commands

@@ -1,11 +1,7 @@
---require('nightfox').setup({options = {transparent = true, styles = {comments = "italic", keywords = "bold"}}})
-
 require("catppuccin").setup({
     highlight_overrides = {
         all = function(colors)
-            return {
-                LineNr = { fg = "#ded7c3" },
-            }
+            return { LineNr = { fg = "#ded7c3" }, }
         end,
     },
     transparent_background = true,
@@ -16,10 +12,7 @@ require("catppuccin").setup({
     },
 })
 
-
-
 -- colorscheme
---vim.cmd("colorscheme dracula")
 vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
 
@@ -29,6 +22,7 @@ vim.opt.relativenumber = true
 vim.cmd [[highlight LineNr ctermfg=white]]
 
 vim.wo.cursorline = true
+
 -- make tabs normal
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -41,8 +35,6 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 6
 vim.g.netrw_banner = 0
 
---vim.opt.signcolumn = "no"
-vim.opt.cursorline = true
 
 -- statusline config (lualine)
 vim.opt.laststatus = 3

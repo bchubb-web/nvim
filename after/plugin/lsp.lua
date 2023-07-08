@@ -42,6 +42,9 @@ lsp.configure('eslint', {
     end
 })
 
+lsp.configure('jq-lsp', {
+
+})
 lsp.configure('intelephense', {
     filetypes = {'php'},
     settings = {
@@ -50,8 +53,8 @@ lsp.configure('intelephense', {
                 associations = {"*.php"},
                 maxSize = 5000000
             },
-            stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
-            environment = { includePaths = '/Users/billychubb/.composer/vendor/php-stubs/' }
+            --stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
+            --environment = { includePaths = '/Users/billychubb/.composer/vendor/php-stubs/' }
         }
     },
     root_dir = function(fname)
@@ -61,14 +64,14 @@ lsp.configure('intelephense', {
 
 
 
-lsp.configure('phpactor', {
+--[[lsp.configure('phpactor', {
     settings = {
         phpactor = {
             stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
             environment = { includePaths = '/Users/billychubb/.composer/vendor/php-stubs/' }
         }
     }
-})
+})]]
 
 
 lsp.configure('lua_ls', {
@@ -81,12 +84,17 @@ lsp.configure('lua_ls', {
     }
 })
 
+lsp.configure('pylsp', {
+
+})
+
 lsp.configure('cssls', {
   --cmd = {"css-languageserver", "--stdio"},
 })
 
 lsp.configure('tsserver', {
-    detached = false
+    detached = false,
+    filetypes = {"typescript", "typescriptreact", "typescript.tsx"}
 })
 
 
