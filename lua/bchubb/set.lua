@@ -1,3 +1,4 @@
+
 require("catppuccin").setup({
     highlight_overrides = {
         all = function(colors)
@@ -15,6 +16,7 @@ require("catppuccin").setup({
 -- colorscheme
 vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
+vim.opt.colorcolumn = "80"
 
 -- line numbers
 vim.opt.number = true
