@@ -7,16 +7,21 @@ return require('packer').startup(function(use)
     -- my colourthemes
     use { "catppuccin/nvim", as = "catppuccin" }
 
+    use "loctvl842/monokai-pro.nvim"
+
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
 
     -- adds icons for other plugons
     use 'nvim-tree/nvim-web-devicons'
 
-    -- telescope - fuzzy finder for local files
-    use { 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { {'nvim-lua/plenary.nvim'}, {'BurntSushi/ripgrep'} } }
+    -- git integration
+    use 'tpope/vim-fugitive'
 
-    -- telescope enhancer
+    -- telescope - fuzzy finder for local files
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { {'nvim-lua/plenary.nvim'}, {'BurntSushi/ripgrep'} } }
+
+    -- telescope fzf support
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
     -- allows for syntax highlighting 
@@ -33,12 +38,12 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
         requires = {
-        -- LSP Support
+            -- LSP Support
             {'neovim/nvim-lspconfig'},             -- Required
             {'williamboman/mason.nvim'},           -- Optional
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-        -- Autocompletion
+            -- Autocompletion
             {'hrsh7th/nvim-cmp'},         -- Required
             {'hrsh7th/cmp-nvim-lsp'},     -- Required
             {'hrsh7th/cmp-buffer'},       -- Optional
@@ -46,7 +51,7 @@ return require('packer').startup(function(use)
             {'saadparwaiz1/cmp_luasnip'}, -- Optional
             {'hrsh7th/cmp-nvim-lua'},     -- Optional
 
-        -- Snippets
+            -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
@@ -72,5 +77,7 @@ return require('packer').startup(function(use)
 
     -- colours hex codes in css
     use 'norcalli/nvim-colorizer.lua'
+
+    use 'mbbill/undotree'
 
 end)

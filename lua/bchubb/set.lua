@@ -1,4 +1,3 @@
-
 require("catppuccin").setup({
     highlight_overrides = {
         all = function(colors)
@@ -13,6 +12,7 @@ require("catppuccin").setup({
     },
 })
 
+
 -- colorscheme
 vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
@@ -21,7 +21,7 @@ vim.opt.colorcolumn = "80"
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.cmd [[highlight LineNr ctermfg=white]]
+--vim.cmd [[highlight LineNr ctermfg=white]]
 
 vim.wo.cursorline = true
 
@@ -34,7 +34,7 @@ vim.opt.expandtab = true
 -- formatting
 vim.opt.smartindent = true
 vim.opt.wrap = false
-vim.opt.scrolloff = 6
+vim.opt.scrolloff = 8
 vim.g.netrw_banner = 0
 
 
@@ -45,6 +45,9 @@ vim.cmd [[highlight WinSeparator guibg=None]]
 -- other functional
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
 vim.opt.updatetime = 50
 
 vim.api.nvim_command("filetype plugin on")

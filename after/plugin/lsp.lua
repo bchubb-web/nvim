@@ -36,7 +36,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.configure('eslint', {
-    --workspaceFolder = {"~/"}
     root_dir = function(fname)
         return vim.fn.getcwd()
     end
@@ -45,15 +44,18 @@ lsp.configure('eslint', {
 lsp.configure('jq-lsp', {
 
 })
+
 lsp.configure('intelephense', {
     filetypes = {'php'},
+    cmd = {"n", "run", "16.17.0", "/Users/billychubb/.local/share/nvim/mason/packages/intelephense/node_modules/intelephense/lib/intelephense.js", "--stdio"},
+    --n run 16.17.0 /Users/billychubb/.local/share/nvim/mason/packages/intelephense/node_modules/intelephense/lib/intelephense.js
     settings = {
         intelephense = {
             files = {
                 associations = {"*.php"},
                 maxSize = 5000000
             },
-            --stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
+            stubs = { "Core", "wordpress", "acf-pro", "wordpress-globals", "wp-cli", "polylang" },
             --environment = { includePaths = '/Users/billychubb/.composer/vendor/php-stubs/' }
         }
     },
@@ -84,13 +86,13 @@ lsp.configure('lua_ls', {
     }
 })
 
-lsp.configure('pylsp', {
-
-})
+lsp.configure('pylsp', {})
 
 lsp.configure('cssls', {
-  --cmd = {"css-languageserver", "--stdio"},
+    cmd = {"n", "run", "16.17.0", "/Users/billychubb/.local/share/nvim/mason/packages/css-lsp/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server", "--stdio"},
 })
+
+lsp.configure('tailwindcss', {})
 
 lsp.configure('tsserver', {
     detached = false,
@@ -103,5 +105,5 @@ lsp.setup()
 -- diagnostic config
 vim.diagnostic.config({
     virtual_text = true,
-    underline = false,
+    underline = true,
 })
