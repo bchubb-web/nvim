@@ -7,16 +7,11 @@ return require('packer').startup(function(use)
     -- my colourthemes
     use { "catppuccin/nvim", as = "catppuccin" }
 
-    use "loctvl842/monokai-pro.nvim"
-
     -- cant rember but it is needed by other plugins
     use "nvim-lua/plenary.nvim"
 
     -- adds icons for other plugons
     use 'nvim-tree/nvim-web-devicons'
-
-    -- git integration
-    use 'tpope/vim-fugitive'
 
     -- telescope - fuzzy finder for local files
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { {'nvim-lua/plenary.nvim'}, {'BurntSushi/ripgrep'} } }
@@ -28,10 +23,16 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- shows the current parent function at the top of the screen when it
-    use ('nvim-treesitter/nvim-treesitter-context')
+    --use ('nvim-treesitter/nvim-treesitter-context')
 
     -- harpoon, blazingly fast
-    use ('ThePrimeagen/harpoon')
+    use {
+        'ThePrimeagen/harpoon',
+        branch = "harpoon2",
+        requires = {
+            {"nvim-lua/plenary.nvim"}
+        }
+    }
 
     -- lsp, Autocompletion, functions etc
     use {
@@ -57,6 +58,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- formatter
+    use { 'mhartington/formatter.nvim' }
+
     --sidebar file tree
     use {
         'nvim-tree/nvim-tree.lua',
@@ -78,6 +82,7 @@ return require('packer').startup(function(use)
     -- colours hex codes in css
     use 'norcalli/nvim-colorizer.lua'
 
+    -- access undo history visually, allow to  step through any changes/redos made
     use 'mbbill/undotree'
 
 end)
