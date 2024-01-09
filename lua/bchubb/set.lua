@@ -1,27 +1,9 @@
-require("catppuccin").setup({
-    highlight_overrides = {
-        all = function(colors)
-            return { LineNr = { fg = "#ded7c3" }, }
-        end,
-    },
-    transparent_background = true,
-    show_end_of_buffer = true,
-    styles = {
-        keywords = { "bold" },
-        properties = { "italic" },
-    },
-})
-
-
--- colorscheme
-vim.cmd("colorscheme catppuccin")
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
 
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
---vim.cmd [[highlight LineNr ctermfg=white]]
 
 vim.wo.cursorline = true
 
@@ -36,11 +18,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.g.netrw_banner = 0
-
-
--- statusline config (lualine)
-vim.opt.laststatus = 3
-vim.cmd [[highlight WinSeparator guibg=None]]
 
 -- other functional
 vim.opt.swapfile = false

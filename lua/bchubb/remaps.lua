@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 
 
 ------ VISUAL ------
@@ -34,12 +33,6 @@ vim.keymap.set("n", "<Leader>A", "0f>lv$F<hdi")
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
 
--- toggle side tree
-vim.keymap.set("n", "<leader>q", vim.cmd.NvimTreeToggle)
-
--- focus of side tree
-vim.keymap.set("n", "<Leader>pp", vim.cmd.NvimTreeFocus)
-vim.keymap.set("n", "<Leader>P", "<c-w>l")
 
 -- add semicolon to end of line
 vim.keymap.set("n", "<leader>;", "A;<Esc>")
@@ -55,11 +48,6 @@ vim.keymap.set("n", "<Leader>bd", "<cmd>w|%bd|e#|bd#<CR>")
 
 -- apend to current line without coving cursor
 vim.keymap.set("n", "J", "mzJ`z")
-
-
--- git commands
-vim.keymap.set("n", "<Leader>ga", "<cmd>Git add .<CR>")
-vim.keymap.set("n", "<Leader>gc", "<cmd>Git commit<CR>")
 
 -- makes tag with class on default opening tag
 vim.keymap.set("n", "mt", "yypa/<Esc>kea class=''<Esc>i")

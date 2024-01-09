@@ -1,14 +1,7 @@
-require("bchubb.packer")
-require("bchubb.remaps")
-require("bchubb.set")
+vim.g.mapleader = " "
 
-vim.api.nvim_create_autocmd('TextYankPost', {
-    group = vim.api.nvim_create_augroup('HighlightYank', {}),
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 40,
-        })
-    end,
-})
+require("bchubb.set")
+require("bchubb.lazy")
+require("bchubb.remaps")
+require("bchubb.functions")
+
